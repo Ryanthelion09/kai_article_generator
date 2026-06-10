@@ -25,8 +25,8 @@ In Claude Code:
 Once installed, run it with:
 
 ```
-/galina-article:galina-article <subject>            # e.g. recent breaches and how to prevent them
-/galina-article:galina-article <subject>  geo:on     # turn on answer-engine optimization
+/galina-article <subject>            # e.g. recent breaches and how to prevent them
+/galina-article <subject>  geo:on     # turn on generative-engine optimization
 ```
 
 ## Recommended permissions
