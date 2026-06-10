@@ -18,31 +18,16 @@ This plugin bundles everything the workflow needs:
 In Claude Code:
 
 ```
-/plugin marketplace add <org>/galina-article-plugin
+/plugin marketplace add kai-article-generator
 /plugin install galina-article@galina-tools
 ```
 
-Replace `<org>/galina-article-plugin` with the GitHub repo (e.g. `kai-security/galina-article-plugin`).
 Once installed, run it with:
 
 ```
 /galina-article:galina-article <subject>            # e.g. recent breaches and how to prevent them
 /galina-article:galina-article <subject>  geo:on     # turn on answer-engine optimization
 ```
-
-### Org-wide distribution (optional)
-
-To make the marketplace available to everyone automatically, add it to a shared/managed
-`settings.json` your team already syncs:
-
-```json
-{
-  "extraKnownMarketplaces": ["<org>/galina-article-plugin"]
-}
-```
-
-(Teammates still run `/plugin install galina-article@galina-tools`, or you enable it for them via
-managed settings per your org's Claude Code policy.)
 
 ## Recommended permissions
 
