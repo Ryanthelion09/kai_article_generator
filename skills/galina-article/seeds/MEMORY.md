@@ -1,0 +1,3 @@
+- [Galina Voice Profile](galina-voice-profile.md) — core stylometric markers of Galina Antova's published writing
+- [Galina Bio/Byline Facts](galina-bio-facts.md) — bio line, current/past roles, how she's credited across outlets
+- [GEO Draft Residual Gaps](feedback_geo-draft-residual-gaps.md) — in strong/GEO drafts the two surviving gaps are first-person operator voice + the missing "can't protect what you can't see" callback

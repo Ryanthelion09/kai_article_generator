@@ -1,0 +1,13 @@
+{
+  "name": "galina-tools",
+  "owner": {
+    "name": "Kai Security"
+  },
+  "plugins": [
+    {
+      "name": "galina-article",
+      "source": "./",
+      "description": "Galina Antova article writer + voice editor. Generates a Galina-voice thought-leadership article, auto-checks it against her voice with the bundled galina-voice-editor agent, and saves it as standalone HTML."
+    }
+  ]
+}

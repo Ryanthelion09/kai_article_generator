@@ -1,0 +1,202 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this file,
+   - You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr" platform="macosx" style="--font-family: sans-serif; --font-weight: normal;"><head>
+    <title id="reader-title">Geopolitics And The Shift To Cyber-Aware Boards</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src chrome:; img-src data: *; media-src *; object-src 'none'">
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width; user-scalable=0">
+    <link rel="stylesheet" href="chrome://global/skin/design-system/tokens-brand.css">
+    <link rel="stylesheet" href="chrome://global/skin/aboutReader.css" type="text/css">
+    <link rel="localization" href="toolkit/about/aboutReader.ftl">
+    <link rel="localization" href="toolkit/branding/brandings.ftl">
+    <script type="module" src="chrome://global/content/reader/moz-slider.mjs"></script>
+    <script type="module" src="chrome://global/content/elements/moz-input-color.mjs"></script>
+    <script type="module" src="chrome://global/content/elements/named-deck.js"></script>
+  <link rel="stylesheet" href="chrome://global/skin/narrate.css"><link rel="shortcut icon" href="https://www.forbes.com/favicon.ico"></head>
+
+  <body class="light loaded" style="--content-width: 30em; --font-size: 20px;">
+    <div class="top-anchor"></div>
+
+    <div id="toolbar" class="toolbar-container scrolled">
+      <div class="toolbar reader-toolbar">
+        <div class="reader-controls" articledir="ltr">
+          <button class="close-button toolbar-button" aria-labelledby="toolbar-close" data-telemetry-id="reader-close">
+            <span class="hover-label" id="toolbar-close" data-l10n-id="about-reader-toolbar-close">Close Reader View</span>
+          </button>
+          <ul class="dropdown text-layout-dropdown">
+            <li>
+              <button class="dropdown-toggle toolbar-button text-layout-button" aria-labelledby="toolbar-text-layout-controls" data-telemetry-id="reader-text-layout-controls">
+                <span class="hover-label" id="toolbar-text-layout-controls" data-l10n-id="about-reader-toolbar-text-layout-controls">Text and layout</span>
+              </button>
+            </li>
+            <li class="dropdown-popup" id="text-layout-controls" tabindex="-1">
+              <h2 data-l10n-id="about-reader-text-header" id="about-reader-text-header">Text</h2>
+              <div id="text-size-controls">
+                <span data-l10n-id="about-reader-text-size-label" id="about-reader-text-size-label">Text size</span>
+                <div class="text-size-buttons buttonrow">
+                  <button class="text-size-minus-button" data-l10n-id="about-reader-toolbar-minus" data-telemetry-id="text-size-minus-button" title="Decrease font size"></button>
+                  <button class="text-size-plus-button" data-l10n-id="about-reader-toolbar-plus" data-telemetry-id="text-size-plus-button" title="Increase font size"></button>
+                </div>
+              </div>
+              <div id="font-controls">
+                <div id="font-type-dropdown" class="dropdown-selector">
+                  <label for="font-type-selector" data-l10n-id="about-reader-font-type-selector-label">Font</label>
+                  <select name="font-type-selector" id="font-type-selector" data-telemetry-id="font-type-selector"><option data-l10n-id="about-reader-font-type-sans-serif" value="sans-serif" selected="selected">Sans-serif</option><option data-l10n-id="about-reader-font-type-serif" value="serif">Serif</option><option data-l10n-id="about-reader-font-type-monospace" value="monospace">Monospace</option></select>
+                </div>
+                <div id="font-weight-dropdown" class="dropdown-selector">
+                  <label for="font-weight-selector" data-l10n-id="about-reader-font-weight-selector-label">Font weight</label>
+                  <select name="font-weight-selector" id="font-weight-selector" data-telemetry-id="font-weight-selector"><option data-l10n-id="about-reader-font-weight-regular" value="regular" selected="selected">Regular</option><option data-l10n-id="about-reader-font-weight-light" value="light">Light</option><option data-l10n-id="about-reader-font-weight-bold" value="bold">Bold</option></select>
+                </div>
+              </div>
+              <hr>
+              <h2 data-l10n-id="about-reader-layout-header" id="about-reader-layout-header">Layout</h2>
+              <div id="content-width-slider" class="slider-container"><moz-slider min="1" max="9" value="3" ticks="9" tick-labels="[]" data-l10n-id="about-reader-content-width-label" data-l10n-attrs="label" slider-icon="chrome://global/skin/reader/content-width-20.svg" data-telemetry-id="content-width-slider" label="Content width"></moz-slider></div>
+              <div id="line-spacing-slider" class="slider-container"><moz-slider min="1" max="9" value="4" ticks="9" tick-labels="[]" data-l10n-id="about-reader-line-spacing-label" data-l10n-attrs="label" slider-icon="chrome://global/skin/reader/line-spacing-20.svg" data-telemetry-id="line-spacing-slider" label="Line spacing"></moz-slider></div>
+              <hr>
+              <details id="about-reader-advanced-layout">
+                <summary class="accordion-header">
+                  <h2 data-l10n-id="about-reader-advanced-layout-header" id="about-reader-advanced-layout-header">Advanced</h2>
+                  <span class="chevron-icon"></span>
+                </summary>
+                <div id="character-spacing-slider" class="slider-container"><moz-slider min="1" max="9" value="1" ticks="9" tick-labels="[&quot;Standard&quot;, &quot;Wide&quot;]" data-l10n-id="about-reader-character-spacing-label" data-l10n-attrs="label" slider-icon="chrome://global/skin/reader/character-spacing-20.svg" data-telemetry-id="character-spacing-slider" label="Character spacing"></moz-slider></div>
+                <div id="word-spacing-slider" class="slider-container"><moz-slider min="1" max="9" value="1" ticks="9" tick-labels="[&quot;Standard&quot;, &quot;Wide&quot;]" data-l10n-id="about-reader-word-spacing-label" data-l10n-attrs="label" slider-icon="chrome://global/skin/reader/word-spacing-20.svg" data-telemetry-id="word-spacing-slider" label="Word spacing"></moz-slider></div>
+                <label for="text-alignment-buttons" data-l10n-id="about-reader-text-alignment-label">Text alignment</label>
+                <div class="text-alignment-buttons radiorow" id="text-alignment-buttons"><input id="radio-itemleft-align-button" type="radio" class="radio-button" name="text-alignment" data-telemetry-id="left-align-button" checked="checked"><label for="radio-itemleft-align-button" class="left-align-button" data-l10n-id="about-reader-text-alignment-left" checked="true" title="Align text left"></label><input id="radio-itemcenter-align-button" type="radio" class="radio-button" name="text-alignment" data-telemetry-id="center-align-button"><label for="radio-itemcenter-align-button" class="center-align-button" data-l10n-id="about-reader-text-alignment-center" title="Align text center"></label><input id="radio-itemright-align-button" type="radio" class="radio-button" name="text-alignment" data-telemetry-id="right-align-button"><label for="radio-itemright-align-button" class="right-align-button" data-l10n-id="about-reader-text-alignment-right" title="Align text right"></label><input id="radio-itemjustify-align-button" type="radio" class="radio-button" name="text-alignment" data-telemetry-id="justify-align-button"><label for="radio-itemjustify-align-button" class="justify-align-button" data-l10n-id="about-reader-text-alignment-justify" title="Justify text"></label></div>
+                <button class="text-layout-reset-button reset-button" data-l10n-id="about-reader-reset-button">Reset defaults</button>
+              </details>
+            </li>
+          </ul>
+          <ul class="dropdown colors-dropdown">
+            <li>
+              <button class="dropdown-toggle toolbar-button colors-button" aria-labelledby="toolbar-color-controls" data-telemetry-id="reader-color-controls">
+                <span class="hover-label" id="toolbar-color-controls" data-l10n-id="about-reader-toolbar-theme-controls">Theme</span>
+              </button>
+            </li>
+            <li class="dropdown-popup" id="color-controls">
+              <h2 data-l10n-id="about-reader-colors-menu-header" id="about-reader-colors-menu-header">Theme</h2>
+              <button-group aria-labelledby="about-reader-colors-menu-header" role="tablist">
+                <button is="named-deck-button" deck="tabs-deck" name="fxtheme" data-l10n-id="about-reader-fxtheme-tab" data-telemetry-id="colors-menu-default-tab" id="tabs-deck-button-fxtheme" role="tab" aria-selected="true" tabindex="0" selected="">Default</button>
+                <button is="named-deck-button" deck="tabs-deck" name="customtheme" data-l10n-id="about-reader-customtheme-tab" data-telemetry-id="colors-menu-custom-tab" id="tabs-deck-button-customtheme" role="tab" aria-selected="false" tabindex="-1">Custom</button>
+              </button-group>
+              <named-deck id="tabs-deck" is-tabbed="" selected-view="fxtheme">
+                <div name="fxtheme" class="color-scheme-buttons radiorow" aria-labelledby="tabs-deck-button-fxtheme" role="tabpanel" slot="selected"><input id="radio-itemauto-button" type="radio" class="radio-button" name="color-scheme" data-telemetry-id="auto-button" checked="checked"><label for="radio-itemauto-button" class="auto-button" data-l10n-id="about-reader-color-auto-theme" checked="true" title="Auto theme">Auto</label><input id="radio-itemlight-button" type="radio" class="radio-button" name="color-scheme" data-telemetry-id="light-button"><label for="radio-itemlight-button" class="light-button" data-l10n-id="about-reader-color-light-theme" title="Light theme">Light</label><input id="radio-itemdark-button" type="radio" class="radio-button" name="color-scheme" data-telemetry-id="dark-button"><label for="radio-itemdark-button" class="dark-button" data-l10n-id="about-reader-color-dark-theme" title="Dark theme">Dark</label><input id="radio-itemsepia-button" type="radio" class="radio-button" name="color-scheme" data-telemetry-id="sepia-button"><label for="radio-itemsepia-button" class="sepia-button" data-l10n-id="about-reader-color-sepia-theme" title="Sepia theme">Sepia</label><input id="radio-itemcontrast-button" type="radio" class="radio-button" name="color-scheme" data-telemetry-id="contrast-button"><label for="radio-itemcontrast-button" class="contrast-button" data-l10n-id="about-reader-color-contrast-theme" title="Contrast theme">Contrast</label><input id="radio-itemgray-button" type="radio" class="radio-button" name="color-scheme" data-telemetry-id="gray-button"><label for="radio-itemgray-button" class="gray-button" data-l10n-id="about-reader-color-gray-theme" title="Gray theme">Gray</label></div>
+                <div name="customtheme" aria-labelledby="tabs-deck-button-customtheme" role="tabpanel" slot="">
+                  <ul class="custom-colors-selection"><li><moz-input-color name="foreground" data-l10n-id="about-reader-custom-colors-foreground2" value="#14151A" data-l10n-attrs="label" label="Text" title="Edit color"></moz-input-color></li><li><moz-input-color name="background" data-l10n-id="about-reader-custom-colors-background2" value="#FFFFFF" data-l10n-attrs="label" label="Background" title="Edit color"></moz-input-color></li><li><moz-input-color name="unvisited-links" data-l10n-id="about-reader-custom-colors-unvisited-links2" value="#0060DF" data-l10n-attrs="label" label="Unvisited links" title="Edit color"></moz-input-color></li><li><moz-input-color name="visited-links" data-l10n-id="about-reader-custom-colors-visited-links2" value="#321C64" data-l10n-attrs="label" label="Visited links" title="Edit color"></moz-input-color></li><li><moz-input-color name="selection-highlight" data-l10n-id="about-reader-custom-colors-selection-highlight2" value="#FFFFCC" data-l10n-attrs="label" label="Highlighter for read aloud" title="Edit color"></moz-input-color></li></ul>
+                  <button class="custom-colors-reset-button reset-button" data-l10n-id="about-reader-reset-button" hidden="">Reset defaults</button>
+                </div>
+              </named-deck>
+            </li>
+          </ul>
+        <ul class="dropdown narrate-dropdown"><li><button class="dropdown-toggle toolbar-button narrate-toggle" data-telemetry-id="reader-listen" aria-label="Read aloud (N)"><span class="hover-label">Read aloud (N)</span></button></li><li class="dropdown-popup"><h2 id="narrate-header">Read aloud</h2><div class="narrate-row narrate-control"><button class="narrate-skip-previous" disabled="disabled" aria-keyshortcuts="ArrowLeft" title="Back (←)"></button><button class="narrate-start-stop" aria-keyshortcuts="N" title="Start (N)"></button><button class="narrate-skip-next" disabled="disabled" aria-keyshortcuts="ArrowRight" title="Forward (→)"></button></div><div class="narrate-row narrate-rate"><span class="narrate-rate-icon slow" title="Slow down narration"></span><input class="narrate-rate-input" value="0" step="5" max="100" min="-100" type="range" aria-label="Choose a narration speed from -100 to 100, where 0 is the default speed." title="Speed"><span class="narrate-rate-icon fast" title="Speed up narration"></span></div><hr><h2 id="voice-header">Voice</h2><div class="narrate-row narrate-voices"><div class="voiceselect voice-select"><button class="select-toggle" aria-controls="voice-options" aria-expanded="false" role="combobox" aria-labelledby="voice-header">
+      <span class="current-voice">Default</span>
+    </button>
+    <div class="options" id="voice-options" role="listbox"><button data-value="automatic" class="option selected" tabindex="-1" role="option" aria-selected="true">Default</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Albert" class="option" tabindex="-1" role="option">Albert (English)</button><button data-value="urn:moz-tts:osx:com.apple.voice.Aman" class="option" tabindex="-1" role="option">Aman (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.BadNews" class="option" tabindex="-1" role="option">Bad News (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Bahh" class="option" tabindex="-1" role="option">Bahh (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Bells" class="option" tabindex="-1" role="option">Bells (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Boing" class="option" tabindex="-1" role="option">Boing (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Bubbles" class="option" tabindex="-1" role="option">Bubbles (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Cellos" class="option" tabindex="-1" role="option">Cellos (English)</button><button data-value="urn:moz-tts:osx:com.apple.voice.compact.en-GB.Daniel" class="option" tabindex="-1" role="option">Daniel (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-GB.Eddy" class="option" tabindex="-1" role="option">Eddy (English (UK)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-US.Eddy" class="option" tabindex="-1" role="option">Eddy (English (US)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-GB.Flo" class="option" tabindex="-1" role="option">Flo (English (UK)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-US.Flo" class="option" tabindex="-1" role="option">Flo (English (US)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Fred" class="option" tabindex="-1" role="option">Fred (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.GoodNews" class="option" tabindex="-1" role="option">Good News (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-GB.Grandma" class="option" tabindex="-1" role="option">Grandma (English (UK)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-US.Grandma" class="option" tabindex="-1" role="option">Grandma (English (US)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-GB.Grandpa" class="option" tabindex="-1" role="option">Grandpa (English (UK)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-US.Grandpa" class="option" tabindex="-1" role="option">Grandpa (English (US)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Hysterical" class="option" tabindex="-1" role="option">Jester (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Junior" class="option" tabindex="-1" role="option">Junior (English)</button><button data-value="urn:moz-tts:osx:com.apple.voice.compact.en-AU.Karen" class="option" tabindex="-1" role="option">Karen (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Kathy" class="option" tabindex="-1" role="option">Kathy (English)</button><button data-value="urn:moz-tts:osx:com.apple.voice.compact.en-IE.Moira" class="option" tabindex="-1" role="option">Moira (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Organ" class="option" tabindex="-1" role="option">Organ (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Ralph" class="option" tabindex="-1" role="option">Ralph (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-GB.Reed" class="option" tabindex="-1" role="option">Reed (English (UK)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-US.Reed" class="option" tabindex="-1" role="option">Reed (English (US)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.voice.compact.en-IN.Rishi" class="option" tabindex="-1" role="option">Rishi (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-GB.Rocko" class="option" tabindex="-1" role="option">Rocko (English (UK)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-US.Rocko" class="option" tabindex="-1" role="option">Rocko (English (US)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.voice.compact.en-US.Samantha" class="option" tabindex="-1" role="option">Samantha (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-GB.Sandy" class="option" tabindex="-1" role="option">Sandy (English (UK)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-US.Sandy" class="option" tabindex="-1" role="option">Sandy (English (US)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-GB.Shelley" class="option" tabindex="-1" role="option">Shelley (English (UK)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-US.Shelley" class="option" tabindex="-1" role="option">Shelley (English (US)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Princess" class="option" tabindex="-1" role="option">Superstar (English)</button><button data-value="urn:moz-tts:osx:com.apple.voice.Tara" class="option" tabindex="-1" role="option">Tara (English)</button><button data-value="urn:moz-tts:osx:com.apple.voice.compact.en-ZA.Tessa" class="option" tabindex="-1" role="option">Tessa (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Trinoids" class="option" tabindex="-1" role="option">Trinoids (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Whisper" class="option" tabindex="-1" role="option">Whisper (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Deranged" class="option" tabindex="-1" role="option">Wobble (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Zarvox" class="option" tabindex="-1" role="option">Zarvox (English)</button></div></div></div></li></ul></div>
+      </div>
+    </div>
+
+    <div class="container" style="--line-height: 1.6em; --letter-spacing: 0.00em; --word-spacing: 0.00em; --text-alignment: start; --block-img-margin-right: unset; --block-img-margin-left: unset;" lang="en" dir="ltr">
+      <div class="header reader-header reader-show-element">
+        <a class="domain reader-domain" href="https://www.forbes.com/councils/forbestechcouncil/2023/02/14/geopolitics-and-the-shift-to-cyber-aware-boards/">forbes.com</a>
+        <div class="domain-border"></div>
+        <h1 class="reader-title">Geopolitics And The Shift To Cyber-Aware Boards</h1>
+        <div class="credits reader-credits">Galina Antova</div>
+        <div class="meta-data">
+          <div class="reader-estimated-time" dir="ltr">6–8 minutes</div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="content">
+        <div class="moz-reader-content reader-show-element"><div id="readability-page-1" class="page"><div><p><em>Galina Antova is the Co-Founder of </em><a href="https://claroty.com/" target="_blank" title="https://claroty.com/" rel="nofollow noopener noreferrer" data-ga-track="ExternalLink:https://claroty.com/" aria-label="Claroty"><em data-ga-track="ExternalLink:https://claroty.com/">Claroty</em></a><em>, cybersecurity company focusing on protecting the world's critical infrastructure.</em></p><figure role="presentation"><div><picture><source media="(min-width: 960px)"><img src="Geopolitics%20And%20The%20Shift%20To%20Cyber-Aware%20Boards_files/0x0.webp" alt="Businesswoman sharing ideas with male and female colleagues in board room post COVID-19" data-height="1794" data-width="2691" class="moz-reader-block-img" moz-reader-center="true"></picture></div><div><p><small>getty</small></p></div></figure><p>The
+ disruption of the pandemic has shown CEOs and boards that, through 
+digital transformation, they have an opportunity to make more aggressive
+ plays that distinguish themselves and their organizations as leaders. 
+While technology adoption and innovation have always been hallmarks of 
+leaders, Accenture finds that in the past three years, they have <a href="https://www.accenture.com/au-en/insights/technology/scaling-enterprise-digital-transformation#:~:text=Technology%20Leaders%20have%20moved%20even%20further%20ahead%20of%20the%20pack%20and%20have%20been%20growing%20at%205x%20the%20rate%20of%20Laggards%20on%20average%20in%20the%20past%20three%20years." target="_blank" title="https://www.accenture.com/au-en/insights/technology/scaling-enterprise-digital-transformation#:~:text=Technology%20Leaders%20have%20moved%20even%20further%20ahead%20of%20the%20pack%20and%20have%20been%20growing%20at%205x%20the%20rate%20of%20Laggards%20on%20average%20in%20the%20past%20three%20years." rel="nofollow noopener noreferrer" data-ga-track="ExternalLink:https://www.accenture.com/au-en/insights/technology/scaling-enterprise-digital-transformation#:~:text=Technology%20Leaders%20have%20moved%20even%20further%20ahead%20of%20the%20pack%20and%20have%20been%20growing%20at%205x%20the%20rate%20of%20Laggards%20on%20average%20in%20the%20past%20three%20years." aria-label="pulled even further ahead">pulled even further ahead</a>, growing revenues five times faster than laggards.</p><p>However,
+ with pervasive connectivity of digital components to physical systems 
+and a rise in remote work came increased cyber risk. <a href="https://newsroom.trendmicro.com/2022-08-31-Trend-Micro-Warns-of-75-Surge-in-Ransomware-Attacks-on-Linux-as-Systems-Adoptions-Soared" target="_blank" title="https://newsroom.trendmicro.com/2022-08-31-Trend-Micro-Warns-of-75-Surge-in-Ransomware-Attacks-on-Linux-as-Systems-Adoptions-Soared" rel="nofollow noopener noreferrer" data-ga-track="ExternalLink:https://newsroom.trendmicro.com/2022-08-31-Trend-Micro-Warns-of-75-Surge-in-Ransomware-Attacks-on-Linux-as-Systems-Adoptions-Soared" aria-label="Ransomware surged">Ransomware surged</a>, and <a href="https://www.dhs.gov/sites/default/files/2022-09/Ransomware%20Attacks%20.pdf" target="_blank" title="https://www.dhs.gov/sites/default/files/2022-09/Ransomware%20Attacks%20.pdf" rel="nofollow noopener noreferrer" data-ga-track="ExternalLink:https://www.dhs.gov/sites/default/files/2022-09/Ransomware%20Attacks%20.pdf" aria-label="critical infrastructure organizations">critical infrastructure organizations</a> have been squarely in attackers’ sites.</p><p>The
+ need to approach digital transformation securely became abundantly 
+clear, which meant CEOs and boards also increased their investment in 
+cybersecurity as a competitive advantage. On the whole, <a href="https://www.heidrick.com/en/insights/compensation-trends/2022-global-chief-information-security-officer-ciso-survey" target="_blank" title="https://www.heidrick.com/en/insights/compensation-trends/2022-global-chief-information-security-officer-ciso-survey" rel="nofollow noopener noreferrer" data-ga-track="ExternalLink:https://www.heidrick.com/en/insights/compensation-trends/2022-global-chief-information-security-officer-ciso-survey" aria-label="the size of CISO’s security teams grew">the size of CISO’s security teams grew</a> in 2022 compared to 2021. Additionally, <a href="https://www.prnewswire.com/news-releases/80-of-critical-infrastructure-organizations-experienced-ransomware-attacks-last-year-301474342.html" target="_blank" title="https://www.prnewswire.com/news-releases/80-of-critical-infrastructure-organizations-experienced-ransomware-attacks-last-year-301474342.html" rel="nofollow noopener noreferrer" data-ga-track="ExternalLink:https://www.prnewswire.com/news-releases/80-of-critical-infrastructure-organizations-experienced-ransomware-attacks-last-year-301474342.html" aria-label="80% of critical infrastructure organizations">80% of critical infrastructure organizations</a>
+ report that both their IT and operational technology (OT) security 
+budgets increased in 2021, and more than half say their C-suite and 
+board are very involved in cybersecurity decision-making and oversight.</p><section id="geopolitical-conflict-hybrid-war"><h2><strong>Geopolitical Conflict And Hybrid War </strong></h2><p>Increased
+ engagement by CEOs and board members in cybersecurity reflects a shift 
+in perspective of cybersecurity as a cost center to a business enabler, 
+which is a good thing. It’s a position that security leaders have been 
+working toward for decades and requires that boards understand 
+technology innovation risks and objectives.</p><p>Now, however, 
+geopolitics adds another dimension to risk management and resilience and
+ begs the question: Do CEOs and board members have the required level of
+ cyber-awareness to understand the impact on their current risk posture 
+and how to optimize resources to mitigate risk?</p><p>Hybrid war is something we’ve been aware of <a href="https://www.cisa.gov/uscert/ncas/alerts/TA18-074A" target="_blank" title="https://www.cisa.gov/uscert/ncas/alerts/TA18-074A" rel="nofollow noopener noreferrer" data-ga-track="ExternalLink:https://www.cisa.gov/uscert/ncas/alerts/TA18-074A" aria-label="for years">for years</a>. The current geopolitical environment has brought into sharp focus how <a href="https://blogs.microsoft.com/on-the-issues/2022/11/04/microsoft-digital-defense-report-2022-ukraine/" target="_blank" title="https://blogs.microsoft.com/on-the-issues/2022/11/04/microsoft-digital-defense-report-2022-ukraine/" rel="nofollow noopener noreferrer" data-ga-track="ExternalLink:https://blogs.microsoft.com/on-the-issues/2022/11/04/microsoft-digital-defense-report-2022-ukraine/" aria-label="brazen cyberattacks">brazen cyberattacks</a>
+ can be used as a weapon, particularly against organizations that hold 
+strategic importance due to their economic sway or critical services 
+they provide. The reportedly unsuccessful attacks on high-voltage 
+electrical substations in Ukraine, believed to be done by Russia’s GRU 
+military intelligence agency, using a variation of <a href="https://www.securityweek.com/energy-provider-ukraine-targeted-industroyer2-ics-malware" target="_blank" title="https://www.securityweek.com/energy-provider-ukraine-targeted-industroyer2-ics-malware" rel="nofollow noopener noreferrer" data-ga-track="ExternalLink:https://www.securityweek.com/energy-provider-ukraine-targeted-industroyer2-ics-malware" aria-label="Sandworm’s Industroyer malware">Sandworm’s Industroyer malware</a>, is just one example.</p><p>However,
+ the importance of resilience was already made real by the ransomware 
+attack on Colonial Pipeline. On the heels of the attack, the <a href="https://www.nytimes.com/2021/05/08/us/politics/cyberattack-colonial-pipeline.html" target="_blank" title="https://www.nytimes.com/2021/05/08/us/politics/cyberattack-colonial-pipeline.html" rel="nofollow noopener noreferrer" data-ga-track="ExternalLink:https://www.nytimes.com/2021/05/08/us/politics/cyberattack-colonial-pipeline.html" aria-label="company reported">company reported</a>
+ they had proactively shut down their pipeline out of an abundance of 
+caution, thus precluding their ability to distribute fuel. A lack of 
+visibility and understanding of their level of exposure, along with 
+limited confidence in their ability to mitigate the impact on the OT 
+network, meant they couldn’t continue operations while under attack. </p></section><section id="cyberaware-boards"><h2><strong>Cyber-Aware Boards</strong></h2><p>Boardroom discussions are changing as resilience takes center stage. In fact, <a href="https://www.gartner.com/en/newsroom/press-releases/2022-06-21-gartner-unveils-the-top-eight-cybersecurity-predictio" target="_blank" title="https://www.gartner.com/en/newsroom/press-releases/2022-06-21-gartner-unveils-the-top-eight-cybersecurity-predictio" rel="nofollow noopener noreferrer" data-ga-track="ExternalLink:https://www.gartner.com/en/newsroom/press-releases/2022-06-21-gartner-unveils-the-top-eight-cybersecurity-predictio" aria-label="Gartner expects">Gartner expects</a> that, by 2025, <a href="https://www.gartner.com/en/newsroom/press-releases/2022-06-21-gartner-unveils-the-top-eight-cybersecurity-predictio" target="_blank" title="https://www.gartner.com/en/newsroom/press-releases/2022-06-21-gartner-unveils-the-top-eight-cybersecurity-predictio" rel="nofollow noopener noreferrer" data-ga-track="ExternalLink:https://www.gartner.com/en/newsroom/press-releases/2022-06-21-gartner-unveils-the-top-eight-cybersecurity-predictio" aria-label="70% of CEOs">70% of CEOs</a>
+ will mandate a culture of resilience and recommends risk leaders 
+recognize resilience as a strategic imperative to survive a confluence 
+of threats. Resilience of business operations is the primary objective 
+of CISOs. Attacks and impact are inevitable, but how well prepared the 
+organization is to carry on with business depends on the controls that 
+have been built in. This is where cybersecurity as a competitive 
+advantage and differentiator comes into play.</p><p>Executives and board
+ members of critical infrastructure organizations are finding they lack 
+the background to deeply understand cyber risk and how to reduce it and 
+are looking for ways to increase their collective cyber awareness. The 
+need is urgent, and the gap is significant given that a majority of 
+board members are former CEOs and CFOs, with most new directors still 
+coming from those backgrounds (<a href="https://www.spencerstuart.com/research-and-insight/us-board-index" target="_blank" title="https://www.spencerstuart.com/research-and-insight/us-board-index" rel="nofollow noopener noreferrer" data-ga-track="ExternalLink:https://www.spencerstuart.com/research-and-insight/us-board-index" aria-label="26% and 23%, respectively">26% and 23%, respectively</a>). The following initiatives can help boards become cyber-aware.</p><p><strong>• Eliminate board recruiting barriers to close the gap.</strong> Most boards require prior board experience. The practice means that there is <a href="https://www.visualcapitalist.com/50-largest-u-s-companies-board-members/" target="_blank" title="https://www.visualcapitalist.com/50-largest-u-s-companies-board-members/" rel="nofollow noopener noreferrer" data-ga-track="ExternalLink:https://www.visualcapitalist.com/50-largest-u-s-companies-board-members/" aria-label="significant overlap">significant overlap</a>
+ between boards of the top 50 largest companies in the U.S., leaving 
+little room for diversity and an infusion of expertise needed to close 
+the cyber-awareness gap. Given the dearth of technologists on boards, 
+much less security experts, that requirement needs to be lifted in order
+ to create a seat at the table for CISOs and CIOs.</p><p><strong>• CEOs also have to play a new role</strong>.
+ Acknowledging cybersecurity projects to enable business objectives, 
+CEOs need to garner support from the rest of the executive team and 
+board to prioritize and accelerate security projects, even if that means
+ some temporary disruptions to the business. The long-term benefit 
+versus the short-term pain is what will allow teams to augment their 
+digital infrastructures quickly. The objective of the CISO is not to 
+eliminate attacks (which is impossible) but to strengthen operational 
+resilience while enabling connectivity and digital transformation to 
+leapfrog the competition.<strong> </strong></p><p><strong>• In the meantime, learn from your in-house experts.</strong>
+ Given all that CISOs have been through in the past few years, boards 
+should make a practice of inviting the CISOs in for regular 
+presentations. Beyond running through risk metrics dashboards, they can 
+lead conversations about what resilient operations look like from a 
+cyber and technology perspective. Successful CISOs have the experience 
+to elevate discussions and share business-critical learnings.</p><p><strong>• Establish a dedicated cybersecurity committee. </strong>To
+ ensure that cybersecurity gets the appropriate level of attention, 
+Gartner has observed that many boards are forming dedicated 
+cybersecurity committees and predicts that <a href="https://www.gartner.com/en/newsroom/press-releases/2021-01-28-gartner-predicts-40--of-boards-will-have-a-dedicated-" target="_blank" title="https://www.gartner.com/en/newsroom/press-releases/2021-01-28-gartner-predicts-40--of-boards-will-have-a-dedicated-" rel="nofollow noopener noreferrer" data-ga-track="ExternalLink:https://www.gartner.com/en/newsroom/press-releases/2021-01-28-gartner-predicts-40--of-boards-will-have-a-dedicated-" aria-label="40% of boards">40% of boards</a>
+ will have these committees in place by 2025. Cybersecurity-related risk
+ is a top concern, so boards need to know they have the proper oversight
+ in place. Organizations need a technologist or cybersecurity 
+professional on the board to lead such a committee.</p><p>The companies 
+that win and are successful in the future will be those that disrupt 
+themselves and transform themselves into technology companies to unlock 
+value for their customers. Cyber resilience is a competitive advantage 
+and needs to be discussed at the highest levels of management: boards of
+ directors.</p><hr><p><a href="https://councils.forbes.com/forbestechcouncil?utm_source=forbes.com&amp;utm_medium=referral&amp;utm_campaign=forbes-links&amp;utm_content=in-article-ad-links" target="_self" title="https://councils.forbes.com/forbestechcouncil?utm_source=forbes.com&amp;utm_medium=referral&amp;utm_campaign=forbes-links&amp;utm_content=in-article-ad-links" data-ga-track="InternalLink:https://councils.forbes.com/forbestechcouncil?utm_source=forbes.com&amp;utm_medium=referral&amp;utm_campaign=forbes-links&amp;utm_content=in-article-ad-links" aria-label="Forbes Technology Council">Forbes Technology Council</a> is an invitation-only community for world-class CIOs, CTOs and technology executives. <a href="https://councils.forbes.com/qualify?utm_source=forbes.com&amp;utm_medium=referral&amp;utm_campaign=forbes-links&amp;utm_term=ftc&amp;utm_content=in-article-ad-links" target="_self" title="https://councils.forbes.com/qualify?utm_source=forbes.com&amp;utm_medium=referral&amp;utm_campaign=forbes-links&amp;utm_term=ftc&amp;utm_content=in-article-ad-links" data-ga-track="InternalLink:https://councils.forbes.com/qualify?utm_source=forbes.com&amp;utm_medium=referral&amp;utm_campaign=forbes-links&amp;utm_term=ftc&amp;utm_content=in-article-ad-links" aria-label="Do I qualify?"><em data-ga-track="InternalLink:https://councils.forbes.com/qualify?utm_source=forbes.com&amp;utm_medium=referral&amp;utm_campaign=forbes-links&amp;utm_term=ftc&amp;utm_content=in-article-ad-links">Do I qualify?</em></a></p><hr></section></div></div></div>
+      </div>
+
+      <div>
+        <div class="reader-message"></div>
+      </div>
+      <div aria-owns="toolbar"></div>
+    </div>
+  
+
+</body></html>

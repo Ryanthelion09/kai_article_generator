@@ -1,0 +1,8 @@
+{
+  "name": "galina-article",
+  "version": "1.0.0",
+  "description": "Write thought-leadership articles in Galina Antova's voice (data-driven, first-person, prescriptive/argued), then auto-run the galina-voice-editor agent to check the draft against her voice before saving. Bundles reference samples and a seeded voice profile.",
+  "author": {
+    "name": "Kai Security"
+  }
+}

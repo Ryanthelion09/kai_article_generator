@@ -1,0 +1,222 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this file,
+   - You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr" platform="macosx" style="--font-family: sans-serif; --font-weight: normal;"><head>
+    <title id="reader-title">Communication And Engagement During Crisis: What B2B Founders Need To Know</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src chrome:; img-src data: *; media-src *; object-src 'none'">
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width; user-scalable=0">
+    <link rel="stylesheet" href="chrome://global/skin/design-system/tokens-brand.css">
+    <link rel="stylesheet" href="chrome://global/skin/aboutReader.css" type="text/css">
+    <link rel="localization" href="toolkit/about/aboutReader.ftl">
+    <link rel="localization" href="toolkit/branding/brandings.ftl">
+    <script type="module" src="chrome://global/content/reader/moz-slider.mjs"></script>
+    <script type="module" src="chrome://global/content/elements/moz-input-color.mjs"></script>
+    <script type="module" src="chrome://global/content/elements/named-deck.js"></script>
+  <link rel="stylesheet" href="chrome://global/skin/narrate.css"><link rel="shortcut icon" href="https://www.forbes.com/favicon.ico"></head>
+
+  <body class="light loaded" style="--content-width: 30em; --font-size: 20px;">
+    <div class="top-anchor"></div>
+
+    <div id="toolbar" class="toolbar-container">
+      <div class="toolbar reader-toolbar">
+        <div class="reader-controls" articledir="ltr">
+          <button class="close-button toolbar-button" aria-labelledby="toolbar-close" data-telemetry-id="reader-close">
+            <span class="hover-label" id="toolbar-close" data-l10n-id="about-reader-toolbar-close">Close Reader View</span>
+          </button>
+          <ul class="dropdown text-layout-dropdown">
+            <li>
+              <button class="dropdown-toggle toolbar-button text-layout-button" aria-labelledby="toolbar-text-layout-controls" data-telemetry-id="reader-text-layout-controls">
+                <span class="hover-label" id="toolbar-text-layout-controls" data-l10n-id="about-reader-toolbar-text-layout-controls">Text and layout</span>
+              </button>
+            </li>
+            <li class="dropdown-popup" id="text-layout-controls" tabindex="-1">
+              <h2 data-l10n-id="about-reader-text-header" id="about-reader-text-header">Text</h2>
+              <div id="text-size-controls">
+                <span data-l10n-id="about-reader-text-size-label" id="about-reader-text-size-label">Text size</span>
+                <div class="text-size-buttons buttonrow">
+                  <button class="text-size-minus-button" data-l10n-id="about-reader-toolbar-minus" data-telemetry-id="text-size-minus-button" title="Decrease font size"></button>
+                  <button class="text-size-plus-button" data-l10n-id="about-reader-toolbar-plus" data-telemetry-id="text-size-plus-button" title="Increase font size"></button>
+                </div>
+              </div>
+              <div id="font-controls">
+                <div id="font-type-dropdown" class="dropdown-selector">
+                  <label for="font-type-selector" data-l10n-id="about-reader-font-type-selector-label">Font</label>
+                  <select name="font-type-selector" id="font-type-selector" data-telemetry-id="font-type-selector"><option data-l10n-id="about-reader-font-type-sans-serif" value="sans-serif" selected="selected">Sans-serif</option><option data-l10n-id="about-reader-font-type-serif" value="serif">Serif</option><option data-l10n-id="about-reader-font-type-monospace" value="monospace">Monospace</option></select>
+                </div>
+                <div id="font-weight-dropdown" class="dropdown-selector">
+                  <label for="font-weight-selector" data-l10n-id="about-reader-font-weight-selector-label">Font weight</label>
+                  <select name="font-weight-selector" id="font-weight-selector" data-telemetry-id="font-weight-selector"><option data-l10n-id="about-reader-font-weight-regular" value="regular" selected="selected">Regular</option><option data-l10n-id="about-reader-font-weight-light" value="light">Light</option><option data-l10n-id="about-reader-font-weight-bold" value="bold">Bold</option></select>
+                </div>
+              </div>
+              <hr>
+              <h2 data-l10n-id="about-reader-layout-header" id="about-reader-layout-header">Layout</h2>
+              <div id="content-width-slider" class="slider-container"><moz-slider min="1" max="9" value="3" ticks="9" tick-labels="[]" data-l10n-id="about-reader-content-width-label" data-l10n-attrs="label" slider-icon="chrome://global/skin/reader/content-width-20.svg" data-telemetry-id="content-width-slider" label="Content width"></moz-slider></div>
+              <div id="line-spacing-slider" class="slider-container"><moz-slider min="1" max="9" value="4" ticks="9" tick-labels="[]" data-l10n-id="about-reader-line-spacing-label" data-l10n-attrs="label" slider-icon="chrome://global/skin/reader/line-spacing-20.svg" data-telemetry-id="line-spacing-slider" label="Line spacing"></moz-slider></div>
+              <hr>
+              <details id="about-reader-advanced-layout">
+                <summary class="accordion-header">
+                  <h2 data-l10n-id="about-reader-advanced-layout-header" id="about-reader-advanced-layout-header">Advanced</h2>
+                  <span class="chevron-icon"></span>
+                </summary>
+                <div id="character-spacing-slider" class="slider-container"><moz-slider min="1" max="9" value="1" ticks="9" tick-labels="[&quot;Standard&quot;, &quot;Wide&quot;]" data-l10n-id="about-reader-character-spacing-label" data-l10n-attrs="label" slider-icon="chrome://global/skin/reader/character-spacing-20.svg" data-telemetry-id="character-spacing-slider" label="Character spacing"></moz-slider></div>
+                <div id="word-spacing-slider" class="slider-container"><moz-slider min="1" max="9" value="1" ticks="9" tick-labels="[&quot;Standard&quot;, &quot;Wide&quot;]" data-l10n-id="about-reader-word-spacing-label" data-l10n-attrs="label" slider-icon="chrome://global/skin/reader/word-spacing-20.svg" data-telemetry-id="word-spacing-slider" label="Word spacing"></moz-slider></div>
+                <label for="text-alignment-buttons" data-l10n-id="about-reader-text-alignment-label">Text alignment</label>
+                <div class="text-alignment-buttons radiorow" id="text-alignment-buttons"><input id="radio-itemleft-align-button" type="radio" class="radio-button" name="text-alignment" data-telemetry-id="left-align-button" checked="checked"><label for="radio-itemleft-align-button" class="left-align-button" data-l10n-id="about-reader-text-alignment-left" checked="true" title="Align text left"></label><input id="radio-itemcenter-align-button" type="radio" class="radio-button" name="text-alignment" data-telemetry-id="center-align-button"><label for="radio-itemcenter-align-button" class="center-align-button" data-l10n-id="about-reader-text-alignment-center" title="Align text center"></label><input id="radio-itemright-align-button" type="radio" class="radio-button" name="text-alignment" data-telemetry-id="right-align-button"><label for="radio-itemright-align-button" class="right-align-button" data-l10n-id="about-reader-text-alignment-right" title="Align text right"></label><input id="radio-itemjustify-align-button" type="radio" class="radio-button" name="text-alignment" data-telemetry-id="justify-align-button"><label for="radio-itemjustify-align-button" class="justify-align-button" data-l10n-id="about-reader-text-alignment-justify" title="Justify text"></label></div>
+                <button class="text-layout-reset-button reset-button" data-l10n-id="about-reader-reset-button">Reset defaults</button>
+              </details>
+            </li>
+          </ul>
+          <ul class="dropdown colors-dropdown">
+            <li>
+              <button class="dropdown-toggle toolbar-button colors-button" aria-labelledby="toolbar-color-controls" data-telemetry-id="reader-color-controls">
+                <span class="hover-label" id="toolbar-color-controls" data-l10n-id="about-reader-toolbar-theme-controls">Theme</span>
+              </button>
+            </li>
+            <li class="dropdown-popup" id="color-controls">
+              <h2 data-l10n-id="about-reader-colors-menu-header" id="about-reader-colors-menu-header">Theme</h2>
+              <button-group aria-labelledby="about-reader-colors-menu-header" role="tablist">
+                <button is="named-deck-button" deck="tabs-deck" name="fxtheme" data-l10n-id="about-reader-fxtheme-tab" data-telemetry-id="colors-menu-default-tab" id="tabs-deck-button-fxtheme" role="tab" aria-selected="true" tabindex="0" selected="">Default</button>
+                <button is="named-deck-button" deck="tabs-deck" name="customtheme" data-l10n-id="about-reader-customtheme-tab" data-telemetry-id="colors-menu-custom-tab" id="tabs-deck-button-customtheme" role="tab" aria-selected="false" tabindex="-1">Custom</button>
+              </button-group>
+              <named-deck id="tabs-deck" is-tabbed="" selected-view="fxtheme">
+                <div name="fxtheme" class="color-scheme-buttons radiorow" aria-labelledby="tabs-deck-button-fxtheme" role="tabpanel" slot="selected"><input id="radio-itemauto-button" type="radio" class="radio-button" name="color-scheme" data-telemetry-id="auto-button" checked="checked"><label for="radio-itemauto-button" class="auto-button" data-l10n-id="about-reader-color-auto-theme" checked="true" title="Auto theme">Auto</label><input id="radio-itemlight-button" type="radio" class="radio-button" name="color-scheme" data-telemetry-id="light-button"><label for="radio-itemlight-button" class="light-button" data-l10n-id="about-reader-color-light-theme" title="Light theme">Light</label><input id="radio-itemdark-button" type="radio" class="radio-button" name="color-scheme" data-telemetry-id="dark-button"><label for="radio-itemdark-button" class="dark-button" data-l10n-id="about-reader-color-dark-theme" title="Dark theme">Dark</label><input id="radio-itemsepia-button" type="radio" class="radio-button" name="color-scheme" data-telemetry-id="sepia-button"><label for="radio-itemsepia-button" class="sepia-button" data-l10n-id="about-reader-color-sepia-theme" title="Sepia theme">Sepia</label><input id="radio-itemcontrast-button" type="radio" class="radio-button" name="color-scheme" data-telemetry-id="contrast-button"><label for="radio-itemcontrast-button" class="contrast-button" data-l10n-id="about-reader-color-contrast-theme" title="Contrast theme">Contrast</label><input id="radio-itemgray-button" type="radio" class="radio-button" name="color-scheme" data-telemetry-id="gray-button"><label for="radio-itemgray-button" class="gray-button" data-l10n-id="about-reader-color-gray-theme" title="Gray theme">Gray</label></div>
+                <div name="customtheme" aria-labelledby="tabs-deck-button-customtheme" role="tabpanel" slot="">
+                  <ul class="custom-colors-selection"><li><moz-input-color name="foreground" data-l10n-id="about-reader-custom-colors-foreground2" value="#14151A" data-l10n-attrs="label" label="Text" title="Edit color"></moz-input-color></li><li><moz-input-color name="background" data-l10n-id="about-reader-custom-colors-background2" value="#FFFFFF" data-l10n-attrs="label" label="Background" title="Edit color"></moz-input-color></li><li><moz-input-color name="unvisited-links" data-l10n-id="about-reader-custom-colors-unvisited-links2" value="#0060DF" data-l10n-attrs="label" label="Unvisited links" title="Edit color"></moz-input-color></li><li><moz-input-color name="visited-links" data-l10n-id="about-reader-custom-colors-visited-links2" value="#321C64" data-l10n-attrs="label" label="Visited links" title="Edit color"></moz-input-color></li><li><moz-input-color name="selection-highlight" data-l10n-id="about-reader-custom-colors-selection-highlight2" value="#FFFFCC" data-l10n-attrs="label" label="Highlighter for read aloud" title="Edit color"></moz-input-color></li></ul>
+                  <button class="custom-colors-reset-button reset-button" data-l10n-id="about-reader-reset-button" hidden="">Reset defaults</button>
+                </div>
+              </named-deck>
+            </li>
+          </ul>
+        <ul class="dropdown narrate-dropdown"><li><button class="dropdown-toggle toolbar-button narrate-toggle" data-telemetry-id="reader-listen" aria-label="Read aloud (N)"><span class="hover-label">Read aloud (N)</span></button></li><li class="dropdown-popup"><h2 id="narrate-header">Read aloud</h2><div class="narrate-row narrate-control"><button class="narrate-skip-previous" disabled="disabled" aria-keyshortcuts="ArrowLeft" title="Back (←)"></button><button class="narrate-start-stop" aria-keyshortcuts="N" title="Start (N)"></button><button class="narrate-skip-next" disabled="disabled" aria-keyshortcuts="ArrowRight" title="Forward (→)"></button></div><div class="narrate-row narrate-rate"><span class="narrate-rate-icon slow" title="Slow down narration"></span><input class="narrate-rate-input" value="0" step="5" max="100" min="-100" type="range" aria-label="Choose a narration speed from -100 to 100, where 0 is the default speed." title="Speed"><span class="narrate-rate-icon fast" title="Speed up narration"></span></div><hr><h2 id="voice-header">Voice</h2><div class="narrate-row narrate-voices"><div class="voiceselect voice-select"><button class="select-toggle" aria-controls="voice-options" aria-expanded="false" role="combobox" aria-labelledby="voice-header">
+      <span class="current-voice">Default</span>
+    </button>
+    <div class="options" id="voice-options" role="listbox"><button data-value="automatic" class="option selected" tabindex="-1" role="option" aria-selected="true">Default</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Albert" class="option" tabindex="-1" role="option">Albert (English)</button><button data-value="urn:moz-tts:osx:com.apple.voice.Aman" class="option" tabindex="-1" role="option">Aman (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.BadNews" class="option" tabindex="-1" role="option">Bad News (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Bahh" class="option" tabindex="-1" role="option">Bahh (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Bells" class="option" tabindex="-1" role="option">Bells (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Boing" class="option" tabindex="-1" role="option">Boing (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Bubbles" class="option" tabindex="-1" role="option">Bubbles (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Cellos" class="option" tabindex="-1" role="option">Cellos (English)</button><button data-value="urn:moz-tts:osx:com.apple.voice.compact.en-GB.Daniel" class="option" tabindex="-1" role="option">Daniel (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-GB.Eddy" class="option" tabindex="-1" role="option">Eddy (English (UK)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-US.Eddy" class="option" tabindex="-1" role="option">Eddy (English (US)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-GB.Flo" class="option" tabindex="-1" role="option">Flo (English (UK)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-US.Flo" class="option" tabindex="-1" role="option">Flo (English (US)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Fred" class="option" tabindex="-1" role="option">Fred (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.GoodNews" class="option" tabindex="-1" role="option">Good News (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-GB.Grandma" class="option" tabindex="-1" role="option">Grandma (English (UK)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-US.Grandma" class="option" tabindex="-1" role="option">Grandma (English (US)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-GB.Grandpa" class="option" tabindex="-1" role="option">Grandpa (English (UK)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-US.Grandpa" class="option" tabindex="-1" role="option">Grandpa (English (US)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Hysterical" class="option" tabindex="-1" role="option">Jester (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Junior" class="option" tabindex="-1" role="option">Junior (English)</button><button data-value="urn:moz-tts:osx:com.apple.voice.compact.en-AU.Karen" class="option" tabindex="-1" role="option">Karen (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Kathy" class="option" tabindex="-1" role="option">Kathy (English)</button><button data-value="urn:moz-tts:osx:com.apple.voice.compact.en-IE.Moira" class="option" tabindex="-1" role="option">Moira (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Organ" class="option" tabindex="-1" role="option">Organ (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Ralph" class="option" tabindex="-1" role="option">Ralph (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-GB.Reed" class="option" tabindex="-1" role="option">Reed (English (UK)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-US.Reed" class="option" tabindex="-1" role="option">Reed (English (US)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.voice.compact.en-IN.Rishi" class="option" tabindex="-1" role="option">Rishi (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-GB.Rocko" class="option" tabindex="-1" role="option">Rocko (English (UK)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-US.Rocko" class="option" tabindex="-1" role="option">Rocko (English (US)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.voice.compact.en-US.Samantha" class="option" tabindex="-1" role="option">Samantha (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-GB.Sandy" class="option" tabindex="-1" role="option">Sandy (English (UK)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-US.Sandy" class="option" tabindex="-1" role="option">Sandy (English (US)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-GB.Shelley" class="option" tabindex="-1" role="option">Shelley (English (UK)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.eloquence.en-US.Shelley" class="option" tabindex="-1" role="option">Shelley (English (US)) (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Princess" class="option" tabindex="-1" role="option">Superstar (English)</button><button data-value="urn:moz-tts:osx:com.apple.voice.Tara" class="option" tabindex="-1" role="option">Tara (English)</button><button data-value="urn:moz-tts:osx:com.apple.voice.compact.en-ZA.Tessa" class="option" tabindex="-1" role="option">Tessa (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Trinoids" class="option" tabindex="-1" role="option">Trinoids (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Whisper" class="option" tabindex="-1" role="option">Whisper (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Deranged" class="option" tabindex="-1" role="option">Wobble (English)</button><button data-value="urn:moz-tts:osx:com.apple.speech.synthesis.voice.Zarvox" class="option" tabindex="-1" role="option">Zarvox (English)</button></div></div></div></li></ul></div>
+      </div>
+    </div>
+
+    <div class="container" style="--line-height: 1.6em; --letter-spacing: 0.00em; --word-spacing: 0.00em; --text-alignment: start; --block-img-margin-right: unset; --block-img-margin-left: unset;" lang="en" dir="ltr">
+      <div class="header reader-header reader-show-element">
+        <a class="domain reader-domain" href="https://www.forbes.com/councils/forbestechcouncil/2020/05/01/communication-and-engagement-during-crisis-what-b2b-founders-need-to-know/">forbes.com</a>
+        <div class="domain-border"></div>
+        <h1 class="reader-title">Communication And Engagement During Crisis: What B2B Founders Need To Know</h1>
+        <div class="credits reader-credits">Galina Antova</div>
+        <div class="meta-data">
+          <div class="reader-estimated-time" dir="ltr">6–7 minutes</div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="content">
+        <div class="moz-reader-content reader-show-element"><div id="readability-page-1" class="page"><div><div id="attachment_1217210260" class="wp-caption">
+ <p><img src="Communication%20And%20Engagement%20During%20Crisis_%20What%20B2B%20Founders%20Need%20To%20Know_files/960x0.jpg" data-height="640" data-width="960" alt="Photo:" class="moz-reader-block-img" moz-reader-center="true">
+ </p>
+ <div>
+   <p><small>Getty</small>
+  </p></div>
+</div>
+<p>The global lockdown has been a real test in the effectiveness of 
+communication for many B2B startup founders whose companies' sales 
+processes are relationship-heavy and depend on face-to-face 
+interactions. Being able to effectively engage with different 
+stakeholders and build culture during times of uncertainty is quickly 
+becoming a leading indicator for how well a B2B company will weather the
+ storm.</p>
+<p>Based on my experiences and those of my peers, I'd like to share the 
+following insights, which are applicable both now and in all major 
+crises your business may face.</p>
+<p><strong>1. Manage your own psychology.</strong></p>
+<p>"In case of emergency, secure your own oxygen mask before assisting 
+others." We receive these instructions when we fly, and they apply here 
+too. You cannot communicate effectively and lead if you cannot manage 
+your emotions, so put on your oxygen mask and take some deep breaths.</p>
+
+<p>Once you can think clearly, you'll realize that your competitors and 
+your customers are in the same situation. What's important is your 
+relative performance. Even if your sales are down 50% for the year and 
+you have to lay off staff, as long as your metrics are better than your 
+competitors', you've done well. Be sure to separate the broader 
+macroeconomic effects (which you don't control) from the effects of your
+ concrete efforts in this crisis. Keep that context in mind and focus on
+ the things that you can control, not those you can't.</p>
+
+<p><strong>2. Communicate to employees.</strong></p>
+<p>With your emotions under control, communicate to your employees who 
+you rely on to execute effectively during this crisis. Clarity is 
+crucial in times of uncertainty, so decide what actions you will take 
+and be very concrete in your communications.</p>
+<p>As much as we wish this weren't true, during an economic downturn, 
+it's often better to overreact. The market will punish you more if you 
+make small incremental changes and correct course every few days. This 
+will also undermine the confidence of your team in your ability to 
+manage the situation, so be truthful with them and don't sugarcoat the 
+situation. Share things like how much money you have left in the bank 
+and your burn rate. Then empower them by giving them a mission. Cutting 
+costs is all defense. Outline your offensive moves — the current market 
+condition you can exploit to drive revenue and position the company 
+better vis-a-vis the competition. Remember, it's all about relative 
+comparisons.</p>
+<p><strong>3. Engage with your board and ask for help.</strong></p>
+<p>The role of your board is to guide you and help you through tough 
+times. Are you considering revised pricing, changing your go-to-market 
+strategy or cutting costs? They are your advisors, so use them. They 
+have many more data points from all their portfolio companies, and you 
+will probably get more of their attention now than ever, so take 
+advantage of their perspectives. If you need specific help, tailor your 
+requests to their areas of specialty.</p>
+
+<p>In turn, your board is counting on you to clearly communicate results
+ and forecasts. You don't control the market, so separate the general 
+market effect and show what you can affect by making changes and 
+adapting to the situation. Give them a clear picture with numbers and 
+share if-then scenarios. Consider a bold move if necessary. If your 
+business model hasn't been delivering and you've been considering a 
+pivot, now can be a great time to iterate your business. Remember that a
+ crisis will kill mediocre business models, and there are no static 
+businesses. Should your analysis show you need to raise money to 
+survive, ask them for a clear commitment.</p>
+<p><strong>4. Put yourself in the shoes of customers and prospects.</strong></p>
+<p>Your specific communication will be very dependent on your business 
+model, but everyone needs empathy right now. Your customers are also in 
+this crisis, and as a large company, they have more to do than you — 
+more coordination, communication, cuts, etc. Remember that actions speak
+ louder than words, so think about what you can do to help lighten their
+ load. You might proactively identify and eliminate bottlenecks or, if 
+you're a SaaS business, make sure your infrastructure will work well 
+under stress, rather than just saying, "We are here for you." Customers 
+will notice, and that will generate goodwill.</p>
+<p>As for prospects, understand that very little is under their control 
+to push the deal forward. The procurement and finance departments of 
+large organizations probably have limited maneuverable space right now. 
+Use the time to map the whole customer journey, think through the 
+friction points and identify what you can do proactively to make it 
+easier for them. For example, move from an annual commitment to a 
+monthly commitment, perhaps with a few months of a free trial.</p>
+<p><strong>5. Get creative with your strategic partners.</strong></p>
+<p>For enterprise startups, strategic partnerships are key. If you have 
+not done so already, identify the players in your domain that are 
+strategic to your go-to-market strategy and engage with them. The exact 
+players will be very specific to your domain, but the common thread is 
+that none of us exist in a vacuum — we're part of a larger process. 
+Think about win-win options. Would a joint offering make sense to 
+eliminate some friction in the customer journey? Or could they be a good
+ investment partner and help provide much-needed stability during this 
+crisis?</p>
+<p>Being a leader requires a special kind of communication that inspires
+ your team, reassures your board and excites your customers, prospects 
+and partners. By focusing on what you can control, acting decisively and
+ communicating clearly, you can strengthen what's working and rethink 
+opportunities to reveal the true staying power of your business.</p>
+</div></div></div>
+      </div>
+
+      <div>
+        <div class="reader-message"></div>
+      </div>
+      <div aria-owns="toolbar"></div>
+    </div>
+  
+
+</body></html>
