@@ -18,7 +18,7 @@ This plugin bundles everything the workflow needs:
 In Claude Code:
 
 ```
-/plugin marketplace add kai-article-generator
+/plugin marketplace add https://github.com/Ryanthelion09/kai_article_generator
 /plugin install galina-article@galina-tools
 ```
 
