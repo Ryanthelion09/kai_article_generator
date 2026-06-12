@@ -36,6 +36,21 @@ Once installed, run it with:
 /threat-brief-article focus: <item>  geo:on  # center on one item; options pass through
 ```
 
+## Updating
+
+Already installed? No need to uninstall/re-install — updates are pulled at the marketplace level:
+
+```
+/plugin marketplace update galina-tools
+```
+
+then run `/reload-plugins` when prompted to pick up the new version in your current session.
+
+To get future updates automatically at startup, enable auto-update once: `/plugin` →
+**Marketplaces** → `galina-tools` → **Enable auto-update**. (Third-party marketplaces like this
+one have auto-update off by default; updates always pull the latest commit from `main` — the
+`version` in plugin.json is informational.)
+
 ## Recommended permissions
 
 The skill verifies every statistic against a live source and saves HTML output, so each user will
