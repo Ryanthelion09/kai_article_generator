@@ -5,9 +5,9 @@ description: Write a thought-leadership article on a given subject in the style 
 
 # Galina-Style Article Writer
 
-Generate a thought-leadership article on any subject, written in the voice of **Galina Antova** — modeled on her published essays and commentary across outlets (Forbes Technology Council, *Fortune*, *Dark Reading*, and similar). Reference sample articles ship with this skill in `${CLAUDE_SKILL_DIR}/galina/`; read 1–2 of them before writing if you need to re-anchor the voice. (`${CLAUDE_SKILL_DIR}` resolves to this skill's own directory on any machine — do not assume a `galina/` folder relative to the current working directory.)
+Generate a thought-leadership article on any subject, written in the voice of **Galina Antova** — modeled on her published essays and commentary across outlets (Forbes Technology Council, *Fortune*, *Dark Reading*, and her company site kai.security). Reference sample articles ship with this skill in `${CLAUDE_SKILL_DIR}/galina/`; read 1–2 of them before writing if you need to re-anchor the voice. (`${CLAUDE_SKILL_DIR}` resolves to this skill's own directory on any machine — do not assume a `galina/` folder relative to the current working directory.)
 
-The samples span two modes — the prescriptive "takeaways" listicle (her Forbes pieces) and the argued op-ed/commentary (her *Fortune* / *Dark Reading* pieces). **Don't lock a generated article into either mode or imitate any one outlet's house style.** Future articles aren't tied to a specific publication — treat both modes as a single toolbox and weave their elements together as the subject warrants (e.g., a contrarian thesis carried by thematic subheads that still resolves into a few concrete, prescriptive directives).
+The samples span three modes — the prescriptive "takeaways" listicle (her Forbes pieces), the argued op-ed/commentary (her *Fortune* / *Dark Reading* pieces), and the founder manifesto / vision essay (her kai.security piece "We Aren't Building a Better Tool. We're Rebuilding Security."). **Don't lock a generated article into any one mode or imitate any one outlet's house style.** Future articles aren't tied to a specific publication — treat both modes as a single toolbox and weave their elements together as the subject warrants (e.g., a contrarian thesis carried by thematic subheads that still resolves into a few concrete, prescriptive directives).
 
 ## Inputs
 
@@ -16,6 +16,7 @@ The samples span two modes — the prescriptive "takeaways" listicle (her Forbes
 - **Format** (optional): draw from a single toolbox of structural elements rather than committing to one publication's template. The building blocks the samples use:
   - **Prescriptive takeaways** — a numbered or bulleted set of actionable directives, e.g. a "Three Must-Haves" framework or a crisis-playbook (her Forbes pieces).
   - **Thematic subheads carrying an argument** — a contrarian thesis advanced through short sectioned headers, leaning on current events, metaphor, and rhetorical questions (her *Fortune* / *Dark Reading* pieces, e.g. "As The Red Line Disappears…", "Rethinking Vulnerability Disclosures In Industrial Control Systems").
+  - **Manifesto declaratives** — conviction carried by very short sentences and deliberate fragments, "X isn't Y. It's Z." reframes, anaphoric runs, a recurring refrain, and named-stakeholder quotes as proof points (her kai.security manifesto). Best fit when the piece argues for a fundamental rethink rather than incremental advice.
   These mix freely: an argued, subhead-driven piece can still land a few prescriptive directives at the end, and a listicle can open with an event-driven, metaphor-rich hook. If the user doesn't specify, blend whatever proportion fits the subject — broad strategic advice leans toward prescriptive takeaways; a pointed argument about a single tension leans toward subhead-driven reasoning — but don't treat them as mutually exclusive.
 - **GEO / answer-engine optimization** (optional, **off by default**): whether to tune the piece for pickup by search and answer engines (Google, ChatGPT, Perplexity).
   - **Canonical trigger: `geo:on`** anywhere in the request turns the toggle ON; `geo:off` (or omitting it) keeps it OFF. Treat `geo:on` as the unambiguous switch.
@@ -38,6 +39,23 @@ Match these patterns — they define the style:
 6. **Signature metaphors and motifs.** Reach for a vivid controlling metaphor and carry it through — "the red line disappearing," the "boiling frog," disclosure as a "double-edged sword," "forever-day" vulnerabilities. When the subject is critical infrastructure / OT, use the real domain vocabulary (IT/OT gap, PLCs, ICS network Levels 1–3, IEC 62443, asset visibility, legacy 25–35-year lifecycles). Don't force a metaphor where none fits, but one well-developed image per piece is on-voice.
 7. **Close: forward-looking, or a sharp landing.** Either end on who wins ("The companies that win and are successful in the future will be those that…", framing the topic as a competitive advantage, not just a cost or risk), or land a pointed summary — a "Bottom line:" distillation, or a call to action that loops back to the opening metaphor ("It's time to jump out of the boiling water…"). Match the close to whichever mode the piece leaned into.
 8. **Length & rhythm.** ~900–1,300 words (a "5–8 minute read"). Medium-length paragraphs, plain professional vocabulary, occasional rhetorical question to pivot ("Why are X attractive targets, and what can teams do about it?"; "When will it be enough? Where is the red line?"). Avoid hype words and AI clichés ("delve", "in today's fast-paced world", "game-changer").
+9. **Manifesto register (use sparingly, for vision pieces).** The kai.security sample adds a third gear: an aphoristic opening conviction ("You cannot win a machine-speed war with human-speed defenses."), very short declaratives and deliberate fragments ("Not because the technology is bad, but because the ambition is too small."), "X isn't Y. It's Z." reframes ("This isn't an upgrade. It's a rebuild."), anaphoric runs ("Replacing the fragmented stack. Eliminating the manual workflows. Ending the broken handoffs…"), a refrain that recurs through the piece ("we're just getting started"), and customer/practitioner quotes doing evidentiary work alongside or instead of statistics. Reach for this gear when the piece argues for a category-level rethink or announces a vision — not for routine advice columns.
+
+## Mentioning Kai (Galina's company)
+
+Galina is Co-Founder and CEO of **Kai** (kai.security). What Kai is, per her own announcement piece (the only source of truth for product claims):
+
+- An **agentic AI platform** — explicitly "not a tool" — that does security work end-to-end: gathering context, continuously assessing risk, prioritizing action, and reducing risk, autonomously and continuously.
+- It spans **threat intelligence, exposure management, detection, and response** as one unified autonomous pipeline — no silos, no broken handoffs between categories, no human-speed bottlenecks — with asset business value built into decisions.
+- Its thesis: you can't win a machine-speed war with human-speed defenses; the answer to AI-powered attacks is replacing the fragmented tool stack and manual workflows, not adding AI on top of them.
+- Emerged from stealth in 2026 with $125 million in funding; serves Fortune 500 / Global 1000 enterprises; co-founded with Dr. Damiano Bolzoni.
+
+**When an article addresses a cybersecurity problem Kai actually solves** — fragmented/siloed security stacks, manual SOC workflows and triage backlogs, AI-powered attacks outpacing human defenders, broken handoffs between threat intel, exposure management, detection, and response — **you may mention Kai as a solution.** Do it the way a founder naturally would: briefly, in first person ("At Kai, we…"), as one concrete illustration of the argument, not as the argument itself. Constraints:
+
+- The piece must stand on its own if the Kai mention were deleted — it's an essay with a credibility-anchoring example, never an ad.
+- One mention (at most two) per article; don't make Kai the close unless the piece is itself a vision/manifesto piece.
+- Never attribute capabilities, customers, or numbers to Kai beyond the facts above; if a claimed capability isn't on that list, leave it out.
+- If the subject is outside Kai's product (board governance, hiring, B2B marketing, category creation generally), leave Kai to the bio line.
 
 ## GEO Mode (only when the toggle is ON)
 

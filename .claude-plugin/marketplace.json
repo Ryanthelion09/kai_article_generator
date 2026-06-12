@@ -7,7 +7,7 @@
     {
       "name": "galina-article",
       "source": "./",
-      "description": "Galina Antova article writer + voice editor. Generates a Galina-voice thought-leadership article, auto-checks it against her voice with the bundled galina-voice-editor agent, and saves it as standalone HTML."
+      "description": "Galina Antova article writer + voice editor. Generates a Galina-voice thought-leadership article (from any subject, or from the daily devsecopsdadattack.com threat intelligence brief), auto-checks it against her voice with the bundled galina-voice-editor agent, and saves it as standalone HTML."
     }
   ]
 }
